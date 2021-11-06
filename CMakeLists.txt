@@ -27,11 +27,6 @@ add_library(glm::glm ALIAS glm)
 	write_basic_package_version_file("glmConfigVersion.cmake" COMPATIBILITY AnyNewerVersion)
 	install(FILES ${CMAKE_CURRENT_BINARY_DIR}/glmConfigVersion.cmake DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/glm)
 
-	include(CTest)
-	if(BUILD_TESTING)
-		add_subdirectory(test)
-	endif()
-
 if (NOT TARGET uninstall)
 configure_file(cmake/cmake_uninstall.cmake.in
                cmake_uninstall.cmake IMMEDIATE @ONLY)
